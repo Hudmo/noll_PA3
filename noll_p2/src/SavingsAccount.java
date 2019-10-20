@@ -5,10 +5,15 @@ public class SavingsAccount {
     private double savingsBalance;
 
 
-    public void calculateMonthlyInterest (double savingsBalance) {
+    public void setSavingsBalance(double userSavingsBalance) {
+        savingsBalance = userSavingsBalance;
+    }
+    public double getSavingsBalance () {
+        return savingsBalance;
+    }
+    public void calculateMonthlyInterest () {
         currentMonthlyInterest = savingsBalance * (annualInterestRate / 12.0); //calc interest on balance ~
         savingsBalance = savingsBalance + currentMonthlyInterest;              //add to account ~
-        System.out.println("Savings balance: " + savingsBalance);
     }
     public static void modifyInterestRate (double modifiedInterestRate) {
         annualInterestRate = modifiedInterestRate;
